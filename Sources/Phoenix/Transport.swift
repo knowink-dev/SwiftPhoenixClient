@@ -27,7 +27,7 @@ import Foundation
 /**
  Defines a `Socket`'s Transport layer.
  */
-protocol Transport {
+public protocol Transport {
   
   /// The current `ReadyState` of the `Transport` layer
   var readyState: TransportReadyState { get }
@@ -52,9 +52,9 @@ protocol Transport {
   /**
    Sends a message to the server.
    
-   - Parameter message: String to send.
+   - Parameter data: Data to send.
    */
-  func send(message: String)
+  func send(data: Data)
 }
 
 
@@ -64,7 +64,7 @@ protocol Transport {
 /**
  Delegate to receive notifications of events that occur in the `Transport` layer
  */
-protocol TransportDelegate {
+public protocol TransportDelegate {
   
   /**
    Notified when the `Transport` opens.
@@ -99,7 +99,7 @@ protocol TransportDelegate {
 /**
  Available `ReadyState`s of a `Transport` layer.
  */
-enum TransportReadyState {
+public enum TransportReadyState {
   
   /// The `Transport` is opening a connection to the server.
   case connecting
@@ -128,7 +128,7 @@ enum TransportReadyState {
  your own WebSocket library or implementation.
  */
 @available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
-class URLSessionTansport: NSObject, Transport, URLSessionWebSocketDelegate {
+public class URLSessionTansport: NSObject, Transport, URLSessionWebSocketDelegate {
   
   
   /// The URL to connect to
@@ -155,17 +155,17 @@ class URLSessionTansport: NSObject, Transport, URLSessionWebSocketDelegate {
    */
   init(url: URL) {
     self.url = url
-
+    
     super.init()
   }
   
   
   
   // MARK: - Transport
-  var readyState: TransportReadyState = .closed
-  var delegate: TransportDelegate? = nil
+  public var readyState: TransportReadyState = .closed
+  public var delegate: TransportDelegate? = nil
   
-  func connect() {
+  public func connect() {
     // Set the trasport state as connecting
     self.readyState = .connecting
     
@@ -177,7 +177,7 @@ class URLSessionTansport: NSObject, Transport, URLSessionWebSocketDelegate {
     self.task?.resume()
   }
   
-  func disconnect(code: Int, reason: String?) {
+  public func disconnect(code: Int, reason: String?) {
     /*
      TODO:
      1. Provide a "strict" mode that fails if an invalid error is given
@@ -192,8 +192,8 @@ class URLSessionTansport: NSObject, Transport, URLSessionWebSocketDelegate {
     self.task?.cancel(with: closeCode, reason: reason?.data(using: .utf8))
   }
   
-  func send(message: String) {
-    self.task?.send(.string(message)) { (error) in
+  public func send(data: Data) {
+    self.task?.send(.data(data)) { (error) in
       /*
        TODO: What is the behavior when an error occurs?
        */
@@ -202,23 +202,23 @@ class URLSessionTansport: NSObject, Transport, URLSessionWebSocketDelegate {
   
   
   // MARK: - URLSessionWebSocketDelegate
-  func urlSession(_ session: URLSession,
-                  webSocketTask: URLSessionWebSocketTask,
-                  didOpenWithProtocol protocol: String?) {
-            print("Web Socket did connect")
+  public func urlSession(_ session: URLSession,
+                         webSocketTask: URLSessionWebSocketTask,
+                         didOpenWithProtocol protocol: String?) {
+    print("Web Socket did connect")
     self.readyState = .open
     self.delegate?.onOpen()
-   
+    
     self.ping()
     // Start receiving messages
     self.receive()
   }
   
-  func urlSession(_ session: URLSession,
-                  webSocketTask: URLSessionWebSocketTask,
-                  didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
-                  reason: Data?) {
-            print("Web Socket did disconnect")
+  public func urlSession(_ session: URLSession,
+                         webSocketTask: URLSessionWebSocketTask,
+                         didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
+                         reason: Data?) {
+    print("Web Socket did disconnect")
     self.readyState = .closed
     self.delegate?.onClose(code: closeCode.rawValue)
   }
@@ -256,10 +256,10 @@ class URLSessionTansport: NSObject, Transport, URLSessionWebSocketDelegate {
       if let error = error {
         print("Error when sending PING \(error)")
       } else {
-          print("Web Socket connection is alive")
-          DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
-            self.ping()
-          }
+        print("Web Socket connection is alive")
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
+          self.ping()
+        }
       }
     }
   }
