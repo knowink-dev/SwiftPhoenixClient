@@ -254,8 +254,7 @@
 				12991E0C254C450A00BB8650 /* Fakes */,
 				12991E0D254C451700BB8650 /* Helpers */,
 				12EF620925524DBF00A6EE9B /* Mocks */,
-				12EF61FE25524B6800A6EE9B /* Phoenix */,
-				12991E1B254C4BC400BB8650 /* RxPhoenix */,
+				12EF61FE25524B6800A6EE9B /* SwiftPhoenixClientTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -293,24 +292,17 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		12991E1B254C4BC400BB8650 /* RxPhoenix */ = {
+		12EF61FE25524B6800A6EE9B /* SwiftPhoenixClientTests */ = {
 			isa = PBXGroup;
 			children = (
 				12991E1C254C4BE100BB8650 /* ChannelRxSpec.swift */,
-			);
-			path = RxPhoenix;
-			sourceTree = "<group>";
-		};
-		12EF61FE25524B6800A6EE9B /* Phoenix */ = {
-			isa = PBXGroup;
-			children = (
 				12EF61FF25524B6800A6EE9B /* SocketSpec.swift */,
 				12EF620025524B6800A6EE9B /* ChannelSpec.swift */,
 				12EF620125524B6800A6EE9B /* PresenceSpec.swift */,
 				12EF620225524B6800A6EE9B /* TimeoutTimerSpec.swift */,
 				12EF620325524B6800A6EE9B /* DefaultSerializerSpec.swift */,
 			);
-			path = Phoenix;
+			path = SwiftPhoenixClientTests;
 			sourceTree = "<group>";
 		};
 		12EF620925524DBF00A6EE9B /* Mocks */ = {
