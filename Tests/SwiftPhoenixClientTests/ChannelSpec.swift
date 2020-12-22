@@ -50,6 +50,9 @@ class ChannelSpec: QuickSpec {
       mockSocket.reconnectAfter = { tries -> TimeInterval in
         return tries > 3 ? 10 : [1, 2, 5, 10][tries - 1]
       }
+    
+      mockSocket.rejoinAfter = Defaults.rejoinSteppedBackOff
+        
       
       channel = Channel(topic: "topic", params: ["one": "two"], socket: mockSocket)
       mockSocket.channelParamsReturnValue = channel
