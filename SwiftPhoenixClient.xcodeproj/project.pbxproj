@@ -206,22 +206,22 @@
 		128143AC25410DF3008615A7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				128143AD25410DF3008615A7 /* RxPhoenix */,
-				128143AE25410DF3008615A7 /* Phoenix */,
+				128143AD25410DF3008615A7 /* RxSwiftPhoenixClient */,
+				128143AE25410DF3008615A7 /* SwiftPhoenixClient */,
 				128143AF25410DF3008615A7 /* Supporting Files */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		128143AD25410DF3008615A7 /* RxPhoenix */ = {
+		128143AD25410DF3008615A7 /* RxSwiftPhoenixClient */ = {
 			isa = PBXGroup;
 			children = (
 				12991E0A254C44B900BB8650 /* Channel+Rx.swift */,
 			);
-			path = RxPhoenix;
+			path = RxSwiftPhoenixClient;
 			sourceTree = "<group>";
 		};
-		128143AE25410DF3008615A7 /* Phoenix */ = {
+		128143AE25410DF3008615A7 /* SwiftPhoenixClient */ = {
 			isa = PBXGroup;
 			children = (
 				12991E04254C3F3300BB8650 /* Channel.swift */,
@@ -235,7 +235,7 @@
 				12991E00254C3F1300BB8650 /* TimeoutTimer.swift */,
 				12922E212543B37B0034B257 /* Transport.swift */,
 			);
-			path = Phoenix;
+			path = SwiftPhoenixClient;
 			sourceTree = "<group>";
 		};
 		128143AF25410DF3008615A7 /* Supporting Files */ = {
