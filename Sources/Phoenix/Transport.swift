@@ -27,6 +27,7 @@ import Foundation
 /**
  Defines a `Socket`'s Transport layer.
  */
+// sourcery: AutoMockable
 public protocol Transport {
   
   /// The current `ReadyState` of the `Transport` layer

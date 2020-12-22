@@ -42,6 +42,7 @@
 
 import Foundation
 
+// sourcery: AutoMockable
 class TimeoutTimer {
   
   /// Callback to be informed when the underlying Timer fires

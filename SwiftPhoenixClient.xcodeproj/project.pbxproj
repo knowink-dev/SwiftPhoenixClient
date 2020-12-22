@@ -17,7 +17,6 @@
 		125A9F0F2543CDDE00292017 /* BasicChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125A9F0E2543CDDE00292017 /* BasicChatViewController.swift */; };
 		1281439C25410D52008615A7 /* SwiftPhoenixClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1281439225410D52008615A7 /* SwiftPhoenixClient.framework */; };
 		128143B225410DF3008615A7 /* SwiftPhoenixClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 128143B025410DF3008615A7 /* SwiftPhoenixClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		128143B825410E01008615A7 /* SwiftPhoenixClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128143B525410E01008615A7 /* SwiftPhoenixClientTests.swift */; };
 		128143D7254113BD008615A7 /* RxSwiftPhoenixClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 128143D6254113BD008615A7 /* RxSwiftPhoenixClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		128143D92541142F008615A7 /* SwiftPhoenixClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1281439225410D52008615A7 /* SwiftPhoenixClient.framework */; };
 		128143DA2541142F008615A7 /* SwiftPhoenixClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1281439225410D52008615A7 /* SwiftPhoenixClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -36,6 +35,14 @@
 		12991E11254C456F00BB8650 /* FakeTimerQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12991E10254C456F00BB8650 /* FakeTimerQueue.swift */; };
 		12991E13254C458100BB8650 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12991E12254C458100BB8650 /* TestHelpers.swift */; };
 		12991E15254C45FC00BB8650 /* FakeTimerQueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12991E14254C45FC00BB8650 /* FakeTimerQueueSpec.swift */; };
+		12991E1D254C4BE100BB8650 /* ChannelRxSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12991E1C254C4BE100BB8650 /* ChannelRxSpec.swift */; };
+		12EF620425524B6800A6EE9B /* SocketSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF61FF25524B6800A6EE9B /* SocketSpec.swift */; };
+		12EF620525524B6800A6EE9B /* ChannelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF620025524B6800A6EE9B /* ChannelSpec.swift */; };
+		12EF620625524B6800A6EE9B /* PresenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF620125524B6800A6EE9B /* PresenceSpec.swift */; };
+		12EF620725524B6800A6EE9B /* TimeoutTimerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF620225524B6800A6EE9B /* TimeoutTimerSpec.swift */; };
+		12EF620825524B6800A6EE9B /* DefaultSerializerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF620325524B6800A6EE9B /* DefaultSerializerSpec.swift */; };
+		12EF620E25524EEF00A6EE9B /* MockableClass.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF620C25524EEF00A6EE9B /* MockableClass.generated.swift */; };
+		12EF620F25524EEF00A6EE9B /* MockableProtocol.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EF620D25524EEF00A6EE9B /* MockableProtocol.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +66,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1281439125410D52008615A7;
 			remoteInfo = SwiftPhoenixClient;
+		};
+		12991E16254C494100BB8650 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1281438925410D52008615A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 128143CA25411361008615A7;
+			remoteInfo = RxSwiftPhoenixClient;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -90,7 +104,6 @@
 		1281439B25410D52008615A7 /* SwiftPhoenixClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPhoenixClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		128143B025410DF3008615A7 /* SwiftPhoenixClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftPhoenixClient.h; sourceTree = "<group>"; };
 		128143B125410DF3008615A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		128143B525410E01008615A7 /* SwiftPhoenixClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPhoenixClientTests.swift; sourceTree = "<group>"; };
 		128143D425411361008615A7 /* RxSwiftPhoenixClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwiftPhoenixClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		128143D6254113BD008615A7 /* RxSwiftPhoenixClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSwiftPhoenixClient.h; sourceTree = "<group>"; };
 		12922E1F2543B10B0034B257 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
@@ -108,6 +121,14 @@
 		12991E10254C456F00BB8650 /* FakeTimerQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTimerQueue.swift; sourceTree = "<group>"; };
 		12991E12254C458100BB8650 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		12991E14254C45FC00BB8650 /* FakeTimerQueueSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeTimerQueueSpec.swift; sourceTree = "<group>"; };
+		12991E1C254C4BE100BB8650 /* ChannelRxSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelRxSpec.swift; sourceTree = "<group>"; };
+		12EF61FF25524B6800A6EE9B /* SocketSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketSpec.swift; sourceTree = "<group>"; };
+		12EF620025524B6800A6EE9B /* ChannelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelSpec.swift; sourceTree = "<group>"; };
+		12EF620125524B6800A6EE9B /* PresenceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenceSpec.swift; sourceTree = "<group>"; };
+		12EF620225524B6800A6EE9B /* TimeoutTimerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeoutTimerSpec.swift; sourceTree = "<group>"; };
+		12EF620325524B6800A6EE9B /* DefaultSerializerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSerializerSpec.swift; sourceTree = "<group>"; };
+		12EF620C25524EEF00A6EE9B /* MockableClass.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockableClass.generated.swift; sourceTree = "<group>"; };
+		12EF620D25524EEF00A6EE9B /* MockableProtocol.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockableProtocol.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,9 +251,11 @@
 		128143B425410E01008615A7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				12991E0D254C451700BB8650 /* helpers */,
-				12991E0C254C450A00BB8650 /* fakes */,
-				128143B525410E01008615A7 /* SwiftPhoenixClientTests.swift */,
+				12991E0C254C450A00BB8650 /* Fakes */,
+				12991E0D254C451700BB8650 /* Helpers */,
+				12EF620925524DBF00A6EE9B /* Mocks */,
+				12EF61FE25524B6800A6EE9B /* Phoenix */,
+				12991E1B254C4BC400BB8650 /* RxPhoenix */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -252,22 +275,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		12991E0C254C450A00BB8650 /* fakes */ = {
+		12991E0C254C450A00BB8650 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
 				12991E0E254C454C00BB8650 /* SocketSpy.swift */,
 				12991E10254C456F00BB8650 /* FakeTimerQueue.swift */,
 				12991E14254C45FC00BB8650 /* FakeTimerQueueSpec.swift */,
 			);
-			path = fakes;
+			path = Fakes;
 			sourceTree = "<group>";
 		};
-		12991E0D254C451700BB8650 /* helpers */ = {
+		12991E0D254C451700BB8650 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				12991E12254C458100BB8650 /* TestHelpers.swift */,
 			);
-			path = helpers;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		12991E1B254C4BC400BB8650 /* RxPhoenix */ = {
+			isa = PBXGroup;
+			children = (
+				12991E1C254C4BE100BB8650 /* ChannelRxSpec.swift */,
+			);
+			path = RxPhoenix;
+			sourceTree = "<group>";
+		};
+		12EF61FE25524B6800A6EE9B /* Phoenix */ = {
+			isa = PBXGroup;
+			children = (
+				12EF61FF25524B6800A6EE9B /* SocketSpec.swift */,
+				12EF620025524B6800A6EE9B /* ChannelSpec.swift */,
+				12EF620125524B6800A6EE9B /* PresenceSpec.swift */,
+				12EF620225524B6800A6EE9B /* TimeoutTimerSpec.swift */,
+				12EF620325524B6800A6EE9B /* DefaultSerializerSpec.swift */,
+			);
+			path = Phoenix;
+			sourceTree = "<group>";
+		};
+		12EF620925524DBF00A6EE9B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				12EF620C25524EEF00A6EE9B /* MockableClass.generated.swift */,
+				12EF620D25524EEF00A6EE9B /* MockableProtocol.generated.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,10 +387,12 @@
 				1281439725410D52008615A7 /* Sources */,
 				1281439825410D52008615A7 /* Frameworks */,
 				1281439925410D52008615A7 /* Resources */,
+				12991E19254C4B1D00BB8650 /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				12991E17254C494100BB8650 /* PBXTargetDependency */,
 				1281439E25410D52008615A7 /* PBXTargetDependency */,
 			);
 			name = SwiftPhoenixClientTests;
@@ -445,6 +499,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12991E19254C4B1D00BB8650 /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				Nimble.framework,
+				Quick.framework,
+				RxSwift.framework,
+			);
+			name = "Copy Carthage Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Copy frameworks for each platform\nexec \"${SRCROOT}/scripts/copy-carthage-frameworks.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		125A9EE02543C82800292017 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -478,11 +556,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				128143B825410E01008615A7 /* SwiftPhoenixClientTests.swift in Sources */,
+				12EF620825524B6800A6EE9B /* DefaultSerializerSpec.swift in Sources */,
 				12991E11254C456F00BB8650 /* FakeTimerQueue.swift in Sources */,
 				12991E15254C45FC00BB8650 /* FakeTimerQueueSpec.swift in Sources */,
+				12EF620725524B6800A6EE9B /* TimeoutTimerSpec.swift in Sources */,
+				12EF620F25524EEF00A6EE9B /* MockableProtocol.generated.swift in Sources */,
 				12991E0F254C454C00BB8650 /* SocketSpy.swift in Sources */,
 				12991E13254C458100BB8650 /* TestHelpers.swift in Sources */,
+				12EF620525524B6800A6EE9B /* ChannelSpec.swift in Sources */,
+				12EF620E25524EEF00A6EE9B /* MockableClass.generated.swift in Sources */,
+				12EF620625524B6800A6EE9B /* PresenceSpec.swift in Sources */,
+				12991E1D254C4BE100BB8650 /* ChannelRxSpec.swift in Sources */,
+				12EF620425524B6800A6EE9B /* SocketSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +596,11 @@
 			isa = PBXTargetDependency;
 			target = 1281439125410D52008615A7 /* SwiftPhoenixClient */;
 			targetProxy = 128143DB2541142F008615A7 /* PBXContainerItemProxy */;
+		};
+		12991E17254C494100BB8650 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 128143CA25411361008615A7 /* RxSwiftPhoenixClient */;
+			targetProxy = 12991E16254C494100BB8650 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -788,6 +878,22 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletv*]" = (
+					"$(SRCROOT)/Carthage/Build/tvOS/",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphone*]" = (
+					"$(SRCROOT)/Carthage/Build/iOS/",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(SRCROOT)/Carthage/Build/Mac/",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=watch*]" = (
+					"$(SRCROOT)/Carthage/Build/watchOS/",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -816,6 +922,22 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletv*]" = (
+					"$(SRCROOT)/Carthage/Build/tvOS/",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphone*]" = (
+					"$(SRCROOT)/Carthage/Build/iOS/",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(SRCROOT)/Carthage/Build/Mac/",
+					"$(inherited)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=watch*]" = (
+					"$(SRCROOT)/Carthage/Build/watchOS/",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -865,7 +987,7 @@
 					"$(SRCROOT)/Carthage/Build/watchOS/",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SwiftPhoenixClient copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -912,7 +1034,7 @@
 					"$(SRCROOT)/Carthage/Build/watchOS/",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SwiftPhoenixClient copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
