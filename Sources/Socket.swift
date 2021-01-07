@@ -110,6 +110,9 @@ public class Socket {
   /// Enable/Disable SSL certificate validation. Default is false. This
   /// must be set before calling `socket.connect()` in order to be applied
   public var disableSSLCertValidation: Bool = false
+
+  /// Websocket connection to the server
+  public var connection: WebSocketClient?
   
   #if os(Linux)
   #else
@@ -153,9 +156,6 @@ public class Socket {
   
   /// True if the Socket closed cleaned. False if not (connection timeout, heartbeat, etc)
   var closeWasClean: Bool = false
-  
-  /// Websocket connection to the server
-  var connection: WebSocketClient?
   
   
   //----------------------------------------------------------------------
