@@ -111,8 +111,6 @@ public class Socket {
   /// must be set before calling `socket.connect()` in order to be applied
   public var disableSSLCertValidation: Bool = false
 
-  /// Websocket connection to the server
-  public var connection: WebSocketClient?
   
   #if os(Linux)
   #else
@@ -156,6 +154,9 @@ public class Socket {
   
   /// True if the Socket closed cleaned. False if not (connection timeout, heartbeat, etc)
   var closeWasClean: Bool = false
+
+  /// Websocket connection to the server
+  var connection: WebSocketClient?
   
   
   //----------------------------------------------------------------------
@@ -220,7 +221,7 @@ public class Socket {
   /// Connects the Socket. The params passed to the Socket on initialization
   /// will be sent through the connection. If the Socket is already connected,
   /// then this call will be ignored.
-  public func connect() {
+    public func connect(onQueue queue: DispatchQueue = .main) {
     // Do not attempt to reconnect if the socket is currently connected
     guard !isConnected else { return }
     
@@ -233,6 +234,7 @@ public class Socket {
                                                paramsClosure: self.paramsClosure)
 
     self.connection = self.transport(self.endPointUrl)
+    self.connection.callbackQueue = queue
     self.connection?.delegate = self
     self.connection?.disableSSLCertValidation = disableSSLCertValidation
     
