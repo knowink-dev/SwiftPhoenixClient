@@ -234,7 +234,9 @@ public class Socket {
                                                paramsClosure: self.paramsClosure)
 
     self.connection = self.transport(self.endPointUrl)
-    self.connection.callbackQueue = queue
+    if let con = self.connection as? Starscream.WebSocket {
+        con.callbackQueue = queue
+    }
     self.connection?.delegate = self
     self.connection?.disableSSLCertValidation = disableSSLCertValidation
     
