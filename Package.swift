@@ -1,4 +1,5 @@
-// swift-tools-version:5.0
+// swift-tools-version: 5.9
+// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 // Copyright (c) 2019 David Stump <david@davidstump.net>
 //
@@ -23,18 +24,31 @@
 import PackageDescription
 
 let package = Package(
-  name: "SwiftPhoenixClient",
-  platforms: [.iOS(.v9), .macOS(.v10_12), .tvOS(.v10), .watchOS(.v2)],
-  products: [
-    .library(name: "SwiftPhoenixClient", targets: ["SwiftPhoenixClient"])
-  ],
-  dependencies: [
-    .package(url: "https://github.com/daltoniam/Starscream.git", .upToNextMajor(from: "3.1.0"))
-  ],
-  targets: [
-    .target(name: "SwiftPhoenixClient",
+    name: "SwiftPhoenixClient",
+    platforms: [
+        .iOS(.v17),
+        .macOS(.v14),
+        .tvOS(.v17),
+        .watchOS(.v10)
+    ],
+    products: [
+        .library(
+            name: "SwiftPhoenixClient",
+            targets: ["SwiftPhoenixClient"]
+        )
+    ],
+    dependencies: [
+        .package(
+            url: "git@github.com:daltoniam/Starscream.git",
+            exact: .init(3, 1, 2)
+        )
+    ],
+    targets: [
+        .target(
+            name: "SwiftPhoenixClient",
             dependencies: ["Starscream"],
             path: "Sources",
-            exclude: ["Example", "Tests"])
+            exclude: ["../Example", "../Tests"]
+        )
     ]
 )
